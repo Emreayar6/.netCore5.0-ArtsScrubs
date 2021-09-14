@@ -1,0 +1,24 @@
+﻿@model WebApplication3.Models.Product
+@{
+    ViewData["Title"] = "ShoppingGet";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row vh-100">
+        <div class="col-md-4">
+            <img class="img-thumbnail" src="@Model.ProductImageURL" />
+        </div>
+        <div class="col-md-8">
+            <h4>@Model.ProductName</h4>
+            <p>@Model.ProductInfo</p>
+            <h4>₺@Model.ProductPrice</h4>
+
+            <a href="/Cart/AddToCart/@Model.ProductID" class="btn btn-success">Sepete Ekle</a>
+        </div>
+
+    </div>
+
+</div>

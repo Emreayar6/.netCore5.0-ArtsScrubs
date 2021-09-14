@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+<div id="carouselExampleDark"
+     class="carousel carousel-dark slide"
+     data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"></li>
+        <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner text-center">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="~/Images/DSC_2332.jpg" class="img-fluid vh-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="~/Images/siyah.jpg" class="img-fluid vh-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Sizin Tarzınız</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        
+    </div>
+    <a class="carousel-control-prev"
+       href="#carouselExampleDark"
+       role="button"
+       data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next"
+       href="#carouselExampleDark"
+       role="button"
+       data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row vh-50">
+        <div class="col-md-6 align-self-center text-center">
+            <p class="fs-1">Şimdi daha renkli.</p>
+            <button class="btn btn-success mb-3" href="#">Teklif Al</button>
+        </div>
+        <div class="col-md-6 align-self-center order-first order-md-last">
+            <img class="card-img" src="~/Images/renkler.png" alt="" />
+        </div>
+    </div>
+</div>
+
+
+

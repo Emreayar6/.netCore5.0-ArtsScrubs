@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #ede0d0">
+    <form class="container-fluid"  method="post" action="/Login/Index/">
+        <br />
+        <h1 class="text-center mt-5 fw-bold">Bayi Giriş Paneli</h1>
+        <div class="row vh-90">
+            <div class="col-md-2"></div>
+            <div class="form-group col-md-4 align-self-center">
+                <label class="fs-3">Kullanıcı Adı</label>
+                <br />
+                <input class="form-control" type="text" name="UserName" />
+                <label class="fs-3">Şifre</label>
+                <br />
+                <input type="password" class="form-control" name="Password" />
+                <br />
+                <button class="btn btn-dark mb-5"
+                        style="background-color: #262827"
+                        href="#">
+                    Giriş Yap
+                </button>
+            </div>
+            <div class="col-md-5 align-self-center order-first order-md-last">
+                <img class="card-img" src="https://i.hizliresim.com/wmAAfx.png" />
+            </div>
+        </div>
+        <div class="col-12 text-center">
+            <a class="btn btn-light" href="/Home/Index/">Ana Sayfaya Dön</a>
+        </div>
+        
+    </form>
+
+</body>
+</html>

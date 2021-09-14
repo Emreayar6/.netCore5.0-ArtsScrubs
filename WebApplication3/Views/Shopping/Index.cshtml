@@ -1,0 +1,49 @@
+﻿@using WebApplication3.Models
+@model ProductListViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+@*<h2>@Model.CurrentCategory</h2>*@
+
+
+
+@*<div class=" row bg-danger mt-3">
+        <div class="col-6 mx-auto bg-info  ">
+
+            <button class="btn btn-success mx-2">
+                Cinsiyet
+            </button>
+            <button class="btn btn-success mx-2">
+                Kategoriler
+            </button>
+            <button class="btn btn-success mx-2">
+                Beden
+            </button>
+            <button class="btn btn-success mx-2">
+                Fiyat
+            </button>
+        </div>
+
+    </div>*@
+
+
+
+<div class="row">
+    @{
+        foreach (var pro in Model.Products)
+        {
+            <div class="col-md-4 ">
+                
+                <img class="img-thumbnail" src="@pro.ProductImageURL" />
+                <h4>@pro.ProductName</h4>
+                <p>₺@pro.ProductPrice</p>
+                <a href="/Shopping/ShoppingGet/@pro.ProductID" class="btn btn-outline-dark btn-toolbar justify-content-center mb-4">İncele</a>
+            </div>
+
+
+        }
+    }
+</div>
+

@@ -1,0 +1,21 @@
+﻿@model WebApplication3.Models.Category
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Kategori Ekleme Sayfası</h3>
+<br />
+
+@using (Html.BeginForm("CategoryAdd", "Category", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.CategoryName)
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CategoryInfo)
+    @Html.TextBoxFor(x => x.CategoryInfo, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Ekle</button>
+
+}

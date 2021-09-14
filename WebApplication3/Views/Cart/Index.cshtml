@@ -1,0 +1,40 @@
+﻿@model List<WebApplication3.Models.Order>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+
+<div class="container vh-100">
+    <h2>Sepetiniz</h2>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>Ürün</th>
+            <th>ID</th>
+            <th>Ürün Adı</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td><img src="@x.ImageURL" style="width:50px; height:50px;" /></td>
+                <td>@x.ProID</td>
+                <td>@x.ProName</td>
+                <td>@x.Quantity</td>
+                <td>@x.Price</td>
+                <td><a href="/Cart/DeleteItem/@x.OrderID" class="btn btn-danger">Sil</a></td>
+
+            </tr>
+        }
+
+
+
+    </table>
+    <td><a href="/Cart/Address/" class="btn btn-success">Devam et</a></td>
+</div>
+
+

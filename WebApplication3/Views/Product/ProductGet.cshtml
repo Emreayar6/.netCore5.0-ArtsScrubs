@@ -1,0 +1,39 @@
+﻿@model WebApplication3.Models.Product
+@{
+    ViewData["Title"] = "ProductGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Ürün Güncelleme Sayfası</h3>
+<br />
+@using (Html.BeginForm("ProductUpdate", "Product", FormMethod.Post))
+{
+    <label>Ürün ID</label>
+    @Html.TextBoxFor(x => x.ProductID, new { @class = "form-control" })
+    <br />
+    <label>Ürün Ad</label>
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+    <br />
+    <label>Ürün Kategori</label>
+    @*@Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })*@
+
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v1, new { @class = "form-control" })
+    <br />
+    <label>Ürün Fiyat</label>
+    @Html.TextBoxFor(x => x.ProductPrice, new { @class = "form-control" })
+    <br />
+    <label>Ürün Stok</label>
+    @Html.TextBoxFor(x => x.ProductStock, new { @class = "form-control" })
+    <br />
+    <label>Ürün Açıklama</label>
+    @Html.TextAreaFor(x => x.ProductInfo, new { @class = "form-control" })
+    <br />
+    <label>Ürün Görseli</label>
+    @Html.TextBoxFor(x => x.ProductImageURL, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Ürün Güncelle</button>
+
+}
+

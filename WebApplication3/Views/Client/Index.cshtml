@@ -1,0 +1,38 @@
+﻿@model List<WebApplication3.Models.Client>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Müşteri Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Müşteri Adı</th>
+        <th>Soyadı</th>
+        <th>Adres</th>
+        <th>GSM</th>
+        <th>Mail</th>
+        <th>Üyelik Durumu</th>
+        <th>Siparişi Görüntüle</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ClientID</td>
+            <td>@x.ClientName</td>
+            <td>@x.ClientSurname</td>
+            <td>@x.ClientAddress</td>
+            <td>@x.ClientGSM</td>
+            <td>@x.ClientMail</td>
+            <td>@x.ClientStatus</td>
+            <td><a href="#" class="btn btn-success">Siparişi Görüntüle</a></td>
+        </tr>
+    }
+
+</table>
+
+
+
